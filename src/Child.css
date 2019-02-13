@@ -1,0 +1,7 @@
+.Child {
+    text-align: center;
+    background-color: lightcoral;
+    margin: 25px;
+    padding: 25px;
+    border: black 2px solid;
+}
