@@ -1,16 +1,12 @@
-import React from 'react';
+import React, {memo} from 'react';
 import './Child.css';
 import ReactLoading from 'react-loading';
-import {Outside} from './Outside'
 
-const Child = (props) => {
-
-    let {randomColor} = React.useContext(Outside);
-
+const MemoChild = memo((props) => {
     return (
         <div className="Child">
-            <ReactLoading type={'spin'} color={randomColor()} height={20} width={80}/>
-            <div>I am a Child! @ {Date.now()}</div>
+            <ReactLoading type={'spin'} color={'#fff'} height={20} width={80} />
+            <div>I am a MemoChild! @ {Date.now()}</div>
             <button onClick={() => {
                 props.setWindow('opened')
             }}>Open Window
@@ -21,6 +17,6 @@ const Child = (props) => {
             </button>
         </div>
     )
-};
+});
 
-export default Child;
+export default MemoChild;
